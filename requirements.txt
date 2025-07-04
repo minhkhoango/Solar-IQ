@@ -1,0 +1,20 @@
+# Core ML & Inference
+ultralytics
+torch
+torchvision
+torchaudio
+onnx
+onnxruntime-gpu # Use onnxruntime for CPU if you don't have a CUDA-enabled GPU
+onnxslim
+opencv-python-headless
+
+# Data Acquisition
+kaggle
+
+# Linting & Formatting
+mypy
+ruff
+black
+
+# Testing
+pytest

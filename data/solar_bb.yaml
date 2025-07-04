@@ -1,0 +1,13 @@
+# Absolute path to the dataset directory from the project root
+path: ./data/solar_bb
+
+# Image directories
+train: images/train
+val: images/valid
+test: images/test
+
+# Number of classes
+nc: 1
+
+# Class names
+names: ['solar_panel']
