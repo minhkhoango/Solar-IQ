@@ -43,26 +43,34 @@ Clone the repository and install the required dependencies using the Makefile.
 git clone [Your-Repo-URL]
 cd Solar-IQ
 make install
-2. Data Acquisition
+```
+
+### 2. Data Acquisition
+
 Download and unzip the dataset from Kaggle using the Makefile.
 
-Bash
-
+```bash
 make download
+```
+
 This will create the data/solar_bb/ directory with the required images/ and labels/ structure.
 
 3. Training
+
 Train the model for 30 epochs. Results will be saved in the runs/ directory.
 
-Bash
-
+```bash
 make train
-4. Inference Demo
+```
+
+### 4. Inference Demo
+
 Run the demo script on a test image using the exported ONNX model. The output will be saved as output.jpg.
 
-Bash
-
+```bash
 make demo
+```
+
 🗺️ Project Roadmap
 This POC establishes a strong baseline. The next steps to create a production-grade system include:
 
