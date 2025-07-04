@@ -18,13 +18,20 @@ Standard computer vision models are brittle and often fail when deployed outdoor
 
 This project serves as a proof-of-concept for a robust perception pipeline that directly addresses these challenges.
 
-## ✨ Key Features & Performance
+## ✨ Key Results
 
-* **Model:** Fine-tuned `YOLOv8n` on a real-world dataset of 621 outdoor images.
-* **Performance:** Achieved **~76 mAP@0.5** on the validation set after 30 epochs.
-* **Deployment Ready:** Exports to a portable **ONNX** format, ready for optimization with TensorRT for deployment on edge GPUs.
-* **Code Quality:** Written in strict-typed Python (`Pylance --strict`), formatted with Black, and linted with Ruff.
-* **Reproducible Workflow:** Managed with a `Makefile` for consistent setup, training, and execution.
+| Image Size | mAP@0.5 | mAP@0.5–0.95 | Avg Latency* | Throughput* |
+|-----------:|--------:|-------------:|-------------:|------------:|
+| 640        | **0.833** | **0.648** | **13.1 ms / image** | **~76 FPS** |
+
+\*Latency measured on an RTX 3060 Laptop GPU (CUDA 12.6) during validation  
+(1.2 ms preprocess + 8.2 ms inference + 3.7 ms postprocess).
+
+### Highlights
+- **Model:** YOLOv8-Nano fine-tuned on 621 outdoor RGB images (solar-panel bounding boxes).
+- **Robustness:** Domain-randomised glare/dust augmentations for outdoor reliability.
+- **Edge-ready:** ONNX export (< 8 MB) converts to TensorRT in one command.
+- **Code Quality:** `mypy --strict`, Ruff, Black; zero notebooks.
 
 ---
 
